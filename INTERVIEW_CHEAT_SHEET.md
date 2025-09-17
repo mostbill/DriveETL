@@ -1,6 +1,6 @@
 # DriveETL Interview Cheat Sheet
 
-## 📋 Project Overview
+## Project Overview
 
 **DriveETL** is a comprehensive data pipeline for vehicle/driving data that implements Extract, Transform, Load (ETL) processes with advanced anomaly detection capabilities.
 
@@ -12,7 +12,7 @@
 
 ---
 
-## 🛠️ Technical Stack
+## Technical Stack
 
 ### Core Technologies
 - **Python 3.x** - Primary programming language
@@ -31,7 +31,7 @@
 
 ---
 
-## 🔑 Key Terms & Concepts
+## Key Terms & Concepts
 
 ### Isolation Forest
 - **Definition**: Unsupervised machine learning algorithm for anomaly detection
@@ -61,7 +61,7 @@
 
 ---
 
-## 🏗️ Architecture Highlights
+## Architecture Highlights
 
 ### Pipeline Components
 1. **Data Ingestion Layer**
@@ -94,7 +94,7 @@
 
 ---
 
-## 💡 Implementation Details
+## Implementation Details
 
 ### Anomaly Detection Implementation
 ```python
@@ -121,7 +121,7 @@ isolation_forest = IsolationForest(
 
 ---
 
-## 🎯 Sample Interview Questions & Answers
+## Sample Interview Questions & Answers
 
 ### Q: "Explain how Isolation Forest works for anomaly detection."
 **A**: "Isolation Forest works by randomly selecting features and split values to isolate data points. Anomalies are easier to isolate and require fewer splits, resulting in shorter path lengths in the isolation trees. Normal points require more splits and have longer paths. The algorithm assigns anomaly scores based on these path lengths."
@@ -143,7 +143,7 @@ isolation_forest = IsolationForest(
 
 ---
 
-## 📊 Project Metrics & Results
+## Project Metrics & Results
 
 ### Data Processing
 - **Records Processed**: 10,000+ synthetic vehicle records
@@ -162,7 +162,7 @@ isolation_forest = IsolationForest(
 
 ---
 
-## 🚀 Business Value & Impact
+## Business Value & Impact
 
 ### Problem Solved
 - **Proactive Maintenance**: Early detection of vehicle issues
@@ -178,7 +178,7 @@ isolation_forest = IsolationForest(
 
 ---
 
-## 🎤 Key Talking Points
+## Key Talking Points
 
 1. **Technical Depth**: Demonstrate understanding of ML algorithms, data engineering, and system design
 2. **Problem-Solving**: Show how you identified requirements and chose appropriate solutions
@@ -188,7 +188,7 @@ isolation_forest = IsolationForest(
 
 ---
 
-## 📝 Quick Reference
+## Quick Reference
 
 ### File Structure
 ```
