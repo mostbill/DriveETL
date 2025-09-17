@@ -283,6 +283,29 @@ After running the full pipeline, you should see:
 - Increase memory allocation for large datasets
 - Enable database indexing for faster queries
 
+## 📊 Sample Visualizations
+
+The AutoDataPipeline generates comprehensive visualizations to help analyze vehicle sensor data and identify anomalies. Here are some sample outputs:
+
+### 📈 Sensor Overview Dashboard
+![Sensor Overview](reports/sensor_overview_20250917_113852.png)
+*Complete dashboard showing all sensor readings over time with trend analysis and statistical summaries*
+
+### 🚨 Anomaly Detection Analysis
+![Anomaly Analysis](reports/anomaly_analysis_20250917_113852.png)
+*Detailed anomaly detection results highlighting outliers in red across different sensor measurements*
+
+### 🔗 Correlation Matrix Heatmap
+![Correlation Matrix](reports/correlation_matrix_20250917_113852.png)
+*Correlation analysis between different sensor parameters to identify relationships and dependencies*
+
+### 🚗 Vehicle Performance Comparison
+![Vehicle Speed Comparison](reports/vehicle_comparison_speed_20250917_113852.png)
+*Comparative analysis of speed patterns across different vehicles in the fleet*
+
+![Vehicle Fuel Level Comparison](reports/vehicle_comparison_fuel_level_20250917_113852.png)
+*Fuel consumption patterns and efficiency metrics across multiple vehicles*
+
 ## 📊 Output Examples
 
 ### Generated Data Sample
