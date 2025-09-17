@@ -53,11 +53,13 @@ class DataStorage:
                         tire_pressure REAL,
                         battery_voltage REAL,
                         oil_pressure REAL,
-                        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-                        INDEX(timestamp),
-                        INDEX(vehicle_id)
+                        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
                     )
                 """)
+                
+                # Create indexes for raw_data
+                cursor.execute("CREATE INDEX IF NOT EXISTS idx_raw_timestamp ON raw_data(timestamp)")
+                cursor.execute("CREATE INDEX IF NOT EXISTS idx_raw_vehicle_id ON raw_data(vehicle_id)")
                 
                 # Create processed_data table
                 cursor.execute("""
@@ -80,11 +82,13 @@ class DataStorage:
                         day_of_week INTEGER,
                         is_weekend INTEGER,
                         processed_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-                        FOREIGN KEY (raw_data_id) REFERENCES raw_data (id),
-                        INDEX(timestamp),
-                        INDEX(vehicle_id)
+                        FOREIGN KEY (raw_data_id) REFERENCES raw_data (id)
                     )
                 """)
+                
+                # Create indexes for processed_data
+                cursor.execute("CREATE INDEX IF NOT EXISTS idx_processed_timestamp ON processed_data(timestamp)")
+                cursor.execute("CREATE INDEX IF NOT EXISTS idx_processed_vehicle_id ON processed_data(vehicle_id)")
                 
                 # Create anomalies table
                 cursor.execute("""
@@ -99,12 +103,14 @@ class DataStorage:
                         anomaly_type TEXT,
                         confidence REAL,
                         detected_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-                        FOREIGN KEY (processed_data_id) REFERENCES processed_data (id),
-                        INDEX(timestamp),
-                        INDEX(vehicle_id),
-                        INDEX(is_anomaly)
+                        FOREIGN KEY (processed_data_id) REFERENCES processed_data (id)
                     )
                 """)
+                
+                # Create indexes for anomalies
+                cursor.execute("CREATE INDEX IF NOT EXISTS idx_anomalies_timestamp ON anomalies(timestamp)")
+                cursor.execute("CREATE INDEX IF NOT EXISTS idx_anomalies_vehicle_id ON anomalies(vehicle_id)")
+                cursor.execute("CREATE INDEX IF NOT EXISTS idx_anomalies_is_anomaly ON anomalies(is_anomaly)")
                 
                 conn.commit()
                 logger.info("Database tables initialized successfully")
@@ -130,7 +136,7 @@ class DataStorage:
                 records = []
                 for _, row in data.iterrows():
                     records.append((
-                        row['timestamp'],
+                        str(row['timestamp']),
                         row['vehicle_id'],
                         row.get('speed'),
                         row.get('engine_temp'),
@@ -148,8 +154,12 @@ class DataStorage:
                 """, records)
                 
                 # Get inserted IDs
-                first_id = cursor.lastrowid - len(records) + 1
-                inserted_ids = list(range(first_id, cursor.lastrowid + 1))
+                if cursor.lastrowid is not None:
+                    first_id = cursor.lastrowid - len(records) + 1
+                    inserted_ids = list(range(first_id, cursor.lastrowid + 1))
+                else:
+                    # Fallback: generate sequential IDs starting from 1
+                    inserted_ids = list(range(1, len(records) + 1))
                 
                 conn.commit()
                 logger.info(f"Inserted {len(records)} raw data records")
@@ -179,7 +189,7 @@ class DataStorage:
                     raw_id = raw_data_ids[i] if i < len(raw_data_ids) else None
                     records.append((
                         raw_id,
-                        row['timestamp'],
+                        str(row['timestamp']),
                         row['vehicle_id'],
                         row.get('speed'),
                         row.get('engine_temp'),
@@ -206,8 +216,12 @@ class DataStorage:
                 """, records)
                 
                 # Get inserted IDs
-                first_id = cursor.lastrowid - len(records) + 1
-                inserted_ids = list(range(first_id, cursor.lastrowid + 1))
+                if cursor.lastrowid is not None:
+                    first_id = cursor.lastrowid - len(records) + 1
+                    inserted_ids = list(range(first_id, cursor.lastrowid + 1))
+                else:
+                    # Fallback: generate sequential IDs starting from 1
+                    inserted_ids = list(range(1, len(records) + 1))
                 
                 conn.commit()
                 logger.info(f"Inserted {len(records)} processed data records")
@@ -232,12 +246,22 @@ class DataStorage:
                 records = []
                 for i, (_, row) in enumerate(anomalies_data.iterrows()):
                     processed_id = processed_data_ids[i] if i < len(processed_data_ids) else None
+                    
+                    # Determine which anomaly column to use
+                    is_anomaly = 0
+                    if 'anomaly_combined' in row and row['anomaly_combined']:
+                        is_anomaly = 1
+                    elif 'anomaly_isolation_forest' in row and row['anomaly_isolation_forest']:
+                        is_anomaly = 1
+                    elif 'anomaly_threshold' in row and row['anomaly_threshold']:
+                        is_anomaly = 1
+                    
                     records.append((
                         processed_id,
-                        row['timestamp'],
+                        str(row['timestamp']),
                         row['vehicle_id'],
-                        row.get('anomaly_score', 0.0),
-                        int(row.get('is_anomaly', 0)),
+                        row.get('isolation_forest_score', 0.0),
+                        is_anomaly,
                         row.get('detection_method', 'isolation_forest'),
                         row.get('anomaly_type'),
                         row.get('confidence')

@@ -16,6 +16,11 @@ for directory in [DATA_DIR, LOGS_DIR, REPORTS_DIR, DB_DIR]:
 
 # Database configuration
 DATABASE_PATH = DB_DIR / "vehicle_data.db"
+DATABASE_CONFIG = {
+    "path": str(DATABASE_PATH),
+    "timeout": 30,
+    "check_same_thread": False
+}
 
 # Data generation settings
 SYNTHETIC_DATA_CONFIG = {
@@ -37,11 +42,16 @@ SYNTHETIC_DATA_CONFIG = {
 TRANSFORMATION_CONFIG = {
     "outlier_threshold": 3.0,  # Standard deviations
     "interpolation_method": "linear",
-    "window_size": 10  # For rolling averages
+    "window_size": 10,  # For rolling averages
+    "remove_outliers": True,
+    "outlier_method": "iqr",
+    "normalize_data": True,
+    "normalization_method": "standard"
 }
 
 # Anomaly detection settings
 ANOMALY_DETECTION_CONFIG = {
+    "detection_method": "isolation_forest",
     "isolation_forest": {
         "contamination": 0.1,
         "random_state": 42,
@@ -56,6 +66,7 @@ ANOMALY_DETECTION_CONFIG = {
 
 # Visualization settings
 VISUALIZATION_CONFIG = {
+    "output_dir": REPORTS_DIR,
     "figure_size": (12, 8),
     "dpi": 300,
     "style": "seaborn-v0_8",
@@ -87,6 +98,9 @@ API_CONFIG = {
 
 # Export settings
 EXPORT_CONFIG = {
+    "enable_export": True,
+    "format": "parquet",
+    "output_dir": REPORTS_DIR,
     "parquet_compression": "snappy",
     "csv_encoding": "utf-8"
 }

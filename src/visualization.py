@@ -88,7 +88,21 @@ class DataVisualizer:
                     
                     # Highlight anomalies if provided
                     if anomalies is not None and not anomalies.empty:
-                        anomaly_data = anomalies[anomalies['is_anomaly'] == 1]
+                        # Determine which anomaly column to use
+                        anomaly_col = None
+                        if 'anomaly_combined' in anomalies.columns:
+                            anomaly_col = 'anomaly_combined'
+                        elif 'anomaly_isolation_forest' in anomalies.columns:
+                            anomaly_col = 'anomaly_isolation_forest'
+                        elif 'anomaly_threshold' in anomalies.columns:
+                            anomaly_col = 'anomaly_threshold'
+                        elif 'is_anomaly' in anomalies.columns:
+                            anomaly_col = 'is_anomaly'
+                        
+                        if anomaly_col:
+                            anomaly_data = anomalies[anomalies[anomaly_col] == 1]
+                        else:
+                            anomaly_data = pd.DataFrame()
                         if not anomaly_data.empty and 'timestamp' in anomaly_data.columns:
                             anomaly_data['timestamp'] = pd.to_datetime(anomaly_data['timestamp'])
                             # Match anomalies with original data
@@ -103,7 +117,21 @@ class DataVisualizer:
                            label='Normal Data', color='blue')
                     
                     if anomalies is not None and not anomalies.empty:
-                        anomaly_indices = anomalies[anomalies['is_anomaly'] == 1].index
+                        # Determine which anomaly column to use
+                        anomaly_col = None
+                        if 'anomaly_combined' in anomalies.columns:
+                            anomaly_col = 'anomaly_combined'
+                        elif 'anomaly_isolation_forest' in anomalies.columns:
+                            anomaly_col = 'anomaly_isolation_forest'
+                        elif 'anomaly_threshold' in anomalies.columns:
+                            anomaly_col = 'anomaly_threshold'
+                        elif 'is_anomaly' in anomalies.columns:
+                            anomaly_col = 'is_anomaly'
+                        
+                        if anomaly_col:
+                            anomaly_indices = anomalies[anomalies[anomaly_col] == 1].index
+                        else:
+                            anomaly_indices = []
                         if len(anomaly_indices) > 0 and col in data.columns:
                             ax.scatter(anomaly_indices, data.loc[anomaly_indices, col], 
                                      color='red', s=30, alpha=0.8, 
@@ -184,7 +212,22 @@ class DataVisualizer:
                 
                 # Group by hour and count anomalies
                 anomalies_copy['hour'] = anomalies_copy['timestamp'].dt.floor('H')
-                hourly_anomalies = anomalies_copy[anomalies_copy['is_anomaly'] == 1].groupby('hour').size()
+                
+                # Determine which anomaly column to use
+                anomaly_col = None
+                if 'anomaly_combined' in anomalies_copy.columns:
+                    anomaly_col = 'anomaly_combined'
+                elif 'anomaly_isolation_forest' in anomalies_copy.columns:
+                    anomaly_col = 'anomaly_isolation_forest'
+                elif 'anomaly_threshold' in anomalies_copy.columns:
+                    anomaly_col = 'anomaly_threshold'
+                elif 'is_anomaly' in anomalies_copy.columns:
+                    anomaly_col = 'is_anomaly'
+                
+                if anomaly_col:
+                    hourly_anomalies = anomalies_copy[anomalies_copy[anomaly_col] == 1].groupby('hour').size()
+                else:
+                    hourly_anomalies = pd.Series(dtype=int)
                 
                 if not hourly_anomalies.empty:
                     ax2.plot(hourly_anomalies.index, hourly_anomalies.values, 
@@ -201,7 +244,21 @@ class DataVisualizer:
             # 3. Anomalies by vehicle
             ax3 = axes[1, 0]
             if 'vehicle_id' in anomalies.columns:
-                vehicle_anomalies = anomalies[anomalies['is_anomaly'] == 1]['vehicle_id'].value_counts()
+                # Determine which anomaly column to use
+                anomaly_col = None
+                if 'anomaly_combined' in anomalies.columns:
+                    anomaly_col = 'anomaly_combined'
+                elif 'anomaly_isolation_forest' in anomalies.columns:
+                    anomaly_col = 'anomaly_isolation_forest'
+                elif 'anomaly_threshold' in anomalies.columns:
+                    anomaly_col = 'anomaly_threshold'
+                elif 'is_anomaly' in anomalies.columns:
+                    anomaly_col = 'is_anomaly'
+                
+                if anomaly_col:
+                    vehicle_anomalies = anomalies[anomalies[anomaly_col] == 1]['vehicle_id'].value_counts()
+                else:
+                    vehicle_anomalies = pd.Series(dtype=int)
                 if not vehicle_anomalies.empty:
                     vehicle_anomalies.plot(kind='bar', ax=ax3, color='orange', alpha=0.7)
                     ax3.set_title('Anomalies by Vehicle')
@@ -213,7 +270,21 @@ class DataVisualizer:
             # 4. Detection method comparison
             ax4 = axes[1, 1]
             if 'detection_method' in anomalies.columns:
-                method_counts = anomalies[anomalies['is_anomaly'] == 1]['detection_method'].value_counts()
+                # Determine which anomaly column to use
+                anomaly_col = None
+                if 'anomaly_combined' in anomalies.columns:
+                    anomaly_col = 'anomaly_combined'
+                elif 'anomaly_isolation_forest' in anomalies.columns:
+                    anomaly_col = 'anomaly_isolation_forest'
+                elif 'anomaly_threshold' in anomalies.columns:
+                    anomaly_col = 'anomaly_threshold'
+                elif 'is_anomaly' in anomalies.columns:
+                    anomaly_col = 'is_anomaly'
+                
+                if anomaly_col:
+                    method_counts = anomalies[anomalies[anomaly_col] == 1]['detection_method'].value_counts()
+                else:
+                    method_counts = pd.Series(dtype=int)
                 if not method_counts.empty:
                     colors = plt.cm.Set3(np.linspace(0, 1, len(method_counts)))
                     wedges, texts, autotexts = ax4.pie(method_counts.values, 
@@ -347,9 +418,17 @@ class DataVisualizer:
                 
                 # Highlight anomalies if provided
                 if anomalies is not None and not anomalies.empty:
-                    anomaly_data = anomalies[anomalies['is_anomaly'] == 1]
-                    if not anomaly_data.empty and 'timestamp' in anomaly_data.columns:
-                        anomaly_data['timestamp'] = pd.to_datetime(anomaly_data['timestamp'])
+                    # Determine anomaly column
+                    anomaly_col = None
+                    for col in ['anomaly_combined', 'anomaly_isolation_forest', 'anomaly_threshold', 'is_anomaly']:
+                        if col in anomalies.columns:
+                            anomaly_col = col
+                            break
+                    
+                    if anomaly_col:
+                        anomaly_data = anomalies[anomalies[anomaly_col] == 1]
+                        if not anomaly_data.empty and 'timestamp' in anomaly_data.columns:
+                            anomaly_data['timestamp'] = pd.to_datetime(anomaly_data['timestamp'])
                         merged = pd.merge(anomaly_data[['timestamp', 'vehicle_id']], 
                                         data_copy, on=['timestamp', 'vehicle_id'], how='inner')
                         if not merged.empty:
@@ -464,8 +543,19 @@ class DataVisualizer:
             
             # Anomaly summary
             if not anomalies.empty:
-                total_anomalies = len(anomalies[anomalies['is_anomaly'] == 1])
-                anomaly_rate = (total_anomalies / len(data)) * 100 if len(data) > 0 else 0
+                # Determine anomaly column
+                anomaly_col = None
+                for col in ['anomaly_combined', 'anomaly_isolation_forest', 'anomaly_threshold', 'is_anomaly']:
+                    if col in anomalies.columns:
+                        anomaly_col = col
+                        break
+                
+                if anomaly_col:
+                    total_anomalies = len(anomalies[anomalies[anomaly_col] == 1])
+                    anomaly_rate = (total_anomalies / len(data)) * 100 if len(data) > 0 else 0
+                else:
+                    total_anomalies = 0
+                    anomaly_rate = 0
                 
                 report_lines.append("ANOMALY DETECTION RESULTS:")
                 report_lines.append("-" * 30)
@@ -478,8 +568,8 @@ class DataVisualizer:
                     report_lines.append(f"Average anomaly score: {avg_score:.3f}")
                     report_lines.append(f"Maximum anomaly score: {max_score:.3f}")
                 
-                if 'vehicle_id' in anomalies.columns:
-                    vehicle_anomalies = anomalies[anomalies['is_anomaly'] == 1]['vehicle_id'].value_counts()
+                if 'vehicle_id' in anomalies.columns and anomaly_col:
+                    vehicle_anomalies = anomalies[anomalies[anomaly_col] == 1]['vehicle_id'].value_counts()
                     if not vehicle_anomalies.empty:
                         report_lines.append(f"Most affected vehicle: {vehicle_anomalies.index[0]} ({vehicle_anomalies.iloc[0]} anomalies)")
                 

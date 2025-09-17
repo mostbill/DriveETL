@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 from typing import Optional, Dict, Any, List
 from config import (
-    DATA_GENERATION_CONFIG, TRANSFORMATION_CONFIG, 
+    SYNTHETIC_DATA_CONFIG, TRANSFORMATION_CONFIG, 
     ANOMALY_DETECTION_CONFIG, EXPORT_CONFIG
 )
 from src.logging_config import get_logger
@@ -38,13 +38,11 @@ class DataPipeline:
             DataFrame with generated sensor data
         """
         try:
-            num_records = num_records or DATA_GENERATION_CONFIG['num_records']
+            num_records = num_records or SYNTHETIC_DATA_CONFIG['num_records']
             logger.info(f"Generating {num_records} sample records")
             
             data = self.ingestion.generate_synthetic_data(
-                num_records=num_records,
-                start_time=datetime.now().replace(hour=0, minute=0, second=0, microsecond=0),
-                anomaly_rate=DATA_GENERATION_CONFIG['anomaly_rate']
+                num_records=num_records
             )
             
             logger.info(f"Generated {len(data)} records for {data['vehicle_id'].nunique()} vehicles")
@@ -98,7 +96,7 @@ class DataPipeline:
             
             # Outlier removal
             if TRANSFORMATION_CONFIG['remove_outliers']:
-                cleaned_data = self.transformation.remove_outliers(
+                cleaned_data, outliers = self.transformation.remove_outliers(
                     cleaned_data, 
                     method=TRANSFORMATION_CONFIG['outlier_method']
                 )
@@ -135,7 +133,7 @@ class DataPipeline:
             logger.info(f"Detecting anomalies in {len(data)} records")
             
             # Train anomaly detection model
-            self.anomaly_detector.train(data)
+            self.anomaly_detector.train_isolation_forest(data)
             
             # Detect anomalies
             anomalies = self.anomaly_detector.detect_anomalies(
@@ -144,7 +142,8 @@ class DataPipeline:
             )
             
             # Log statistics
-            total_anomalies = len(anomalies[anomalies['is_anomaly'] == 1])
+            anomaly_column = 'anomaly_combined' if ANOMALY_DETECTION_CONFIG['detection_method'] == 'combined' else f"anomaly_{ANOMALY_DETECTION_CONFIG['detection_method']}"
+            total_anomalies = len(anomalies[anomalies[anomaly_column] == True])
             anomaly_rate = (total_anomalies / len(anomalies)) * 100 if len(anomalies) > 0 else 0
             
             logger.info(f"Anomaly detection completed: {total_anomalies} anomalies detected ({anomaly_rate:.2f}% rate)")
@@ -314,12 +313,14 @@ class DataPipeline:
             execution_time = datetime.now() - start_time
             
             # Compile results
+            anomaly_column = 'anomaly_combined' if ANOMALY_DETECTION_CONFIG['detection_method'] == 'combined' else f"anomaly_{ANOMALY_DETECTION_CONFIG['detection_method']}"
+            anomalies_count = len(anomalies[anomalies[anomaly_column] == True])
             results = {
                 'execution_time': str(execution_time),
                 'data_source': data_source,
                 'records_processed': len(raw_data),
-                'anomalies_detected': len(anomalies[anomalies['is_anomaly'] == 1]),
-                'anomaly_rate': (len(anomalies[anomalies['is_anomaly'] == 1]) / len(anomalies)) * 100 if len(anomalies) > 0 else 0,
+                'anomalies_detected': anomalies_count,
+                'anomaly_rate': (anomalies_count / len(anomalies)) * 100 if len(anomalies) > 0 else 0,
                 'storage_ids': storage_ids,
                 'visualization_files': plot_files,
                 'report_file': report_path,
@@ -389,11 +390,13 @@ class DataPipeline:
             # Generate report
             report_path = self.generate_report(processed_data, anomalies)
             
+            anomaly_column = 'anomaly_combined' if ANOMALY_DETECTION_CONFIG['detection_method'] == 'combined' else f"anomaly_{ANOMALY_DETECTION_CONFIG['detection_method']}"
+            anomalies_count = len(anomalies[anomalies[anomaly_column] == True])
             results = {
                 'input_file': input_file,
                 'records_processed': len(raw_data),
-                'anomalies_detected': len(anomalies[anomalies['is_anomaly'] == 1]),
-                'anomaly_rate': (len(anomalies[anomalies['is_anomaly'] == 1]) / len(anomalies)) * 100 if len(anomalies) > 0 else 0,
+                'anomalies_detected': anomalies_count,
+                'anomaly_rate': (anomalies_count / len(anomalies)) * 100 if len(anomalies) > 0 else 0,
                 'visualization_files': plot_files,
                 'report_file': report_path
             }

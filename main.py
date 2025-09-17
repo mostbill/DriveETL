@@ -61,18 +61,18 @@ def main():
         
         if args.mode == "generate":
             logger.info("Generating synthetic vehicle sensor data...")
-            pipeline.generate_synthetic_data()
+            pipeline.run_data_generation_only()
             
         elif args.mode == "process":
             if not args.input_file:
                 logger.error("Input file required for process mode")
                 sys.exit(1)
             logger.info(f"Processing data from {args.input_file}...")
-            pipeline.process_file(args.input_file, args.output_dir, args.export_parquet)
+            pipeline.run_processing_only(args.input_file)
             
         elif args.mode == "full":
             logger.info("Running full pipeline (generate + process)...")
-            pipeline.run_full_pipeline(args.output_dir, args.export_parquet)
+            pipeline.run_full_pipeline()
             
         elif args.mode == "api":
             logger.info("Starting FastAPI server...")

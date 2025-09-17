@@ -149,18 +149,29 @@ async def detect_anomalies(request: AnomalyDetectionRequest):
         
         # Prepare results
         results = []
+        # Determine anomaly column
+        anomaly_col = None
+        for col in ['anomaly_combined', 'anomaly_isolation_forest', 'anomaly_threshold', 'is_anomaly']:
+            if col in anomalies.columns:
+                anomaly_col = col
+                break
+        
         for _, row in anomalies.iterrows():
+            is_anomaly_val = bool(row[anomaly_col]) if anomaly_col else False
             results.append(AnomalyResult(
                 vehicle_id=row['vehicle_id'],
                 timestamp=row['timestamp'].isoformat(),
-                is_anomaly=bool(row['is_anomaly']),
-                anomaly_score=float(row.get('anomaly_score', 0)),
+                is_anomaly=is_anomaly_val,
+                anomaly_score=float(row.get('isolation_forest_score', row.get('anomaly_score', 0))),
                 confidence=float(row.get('confidence', 0))
             ))
         
         # Calculate statistics
         total_records = len(anomalies)
-        anomalies_detected = len(anomalies[anomalies['is_anomaly'] == 1])
+        if anomaly_col:
+            anomalies_detected = len(anomalies[anomalies[anomaly_col] == 1])
+        else:
+            anomalies_detected = 0
         anomaly_rate = (anomalies_detected / total_records) * 100 if total_records > 0 else 0
         
         processing_time = str(datetime.now() - start_time)

@@ -1,0 +1,30 @@
+============================================================
+AutoDataPipeline - Analysis Summary Report
+============================================================
+Generated: 2025-09-17 11:37:45
+
+DATA OVERVIEW:
+--------------------
+Total records processed: 962
+Unique vehicles: 2545
+Date range: 2025-09-16 11:33:23.909005 to 2025-09-17 11:37:09.595893
+
+ANOMALY DETECTION RESULTS:
+------------------------------
+Total anomalies detected: 97
+Anomaly rate: 10.08%
+Most affected vehicle: VH4860 (2 anomalies)
+
+SENSOR STATISTICS:
+--------------------
+Speed:
+  Mean: -0.00
+  Std: 1.00
+  Min: -2.65
+  Max: 2.61
+
+Fuel Level:
+  Mean: -0.00
+  Std: 1.00
+  Min: -2.41
+  Max: 1.68

@@ -1,0 +1,424 @@
+2025-09-17 11:27:19,654 - root - INFO - Logging system initialized
+2025-09-17 11:27:19,656 - root - INFO - Log level: INFO
+2025-09-17 11:27:19,656 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:27:19,656 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:27:19,657 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:27:19,657 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:27:19,668 - src.data_storage - ERROR - Error initializing database: near "INDEX": syntax error
+2025-09-17 11:27:19,668 - __main__ - ERROR - Pipeline execution failed: near "INDEX": syntax error
+2025-09-17 11:28:00,026 - root - INFO - Logging system initialized
+2025-09-17 11:28:00,026 - root - INFO - Log level: INFO
+2025-09-17 11:28:00,026 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:28:00,027 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:28:00,027 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:28:00,027 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:28:00,080 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:28:00,080 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:28:00,080 - __main__ - ERROR - Pipeline execution failed: 'output_dir'
+2025-09-17 11:28:37,340 - root - INFO - Logging system initialized
+2025-09-17 11:28:37,341 - root - INFO - Log level: INFO
+2025-09-17 11:28:37,341 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:28:37,342 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:28:37,342 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:28:37,342 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:28:37,347 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:28:37,348 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:28:37,348 - __main__ - ERROR - Pipeline execution failed: 'output_dir'
+2025-09-17 11:29:09,299 - root - INFO - Logging system initialized
+2025-09-17 11:29:09,300 - root - INFO - Log level: INFO
+2025-09-17 11:29:09,300 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:29:09,300 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:29:09,301 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:29:09,301 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:29:09,303 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:29:09,303 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:29:09,303 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:29:09,304 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:29:09,304 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:29:09,304 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:29:09,305 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:29:09,305 - src.pipeline - ERROR - Error generating sample data: DataIngestion.generate_synthetic_data() got an unexpected keyword argument 'start_time'
+2025-09-17 11:29:09,305 - src.pipeline - ERROR - Error in full pipeline execution: DataIngestion.generate_synthetic_data() got an unexpected keyword argument 'start_time'
+2025-09-17 11:29:09,305 - __main__ - ERROR - Pipeline execution failed: DataIngestion.generate_synthetic_data() got an unexpected keyword argument 'start_time'
+2025-09-17 11:29:56,298 - root - INFO - Logging system initialized
+2025-09-17 11:29:56,299 - root - INFO - Log level: INFO
+2025-09-17 11:29:56,299 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:29:56,300 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:29:56,300 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:29:56,300 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:29:56,303 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:29:56,304 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:29:56,304 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:29:56,304 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:29:56,304 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:29:56,305 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:29:56,305 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:29:56,305 - src.data_ingestion - INFO - Generating 1000 synthetic vehicle sensor records
+2025-09-17 11:29:56,321 - src.data_ingestion - INFO - Injecting 50 anomalies (5.0%)
+2025-09-17 11:29:56,354 - src.data_ingestion - INFO - Generated synthetic data with 1000 records
+2025-09-17 11:29:56,359 - src.pipeline - INFO - Generated 1000 records for 955 vehicles
+2025-09-17 11:29:56,360 - src.pipeline - INFO - Data ingestion completed from synthetic data generation
+2025-09-17 11:29:56,360 - src.pipeline - INFO - Processing 1000 records
+2025-09-17 11:29:56,360 - src.data_transformation - INFO - Starting data cleaning for 1000 records
+2025-09-17 11:29:56,388 - src.data_transformation - INFO - Data cleaning completed: 1000 records remaining, 0 records removed
+2025-09-17 11:29:56,389 - src.pipeline - INFO - Data cleaning completed: 1000 records remaining
+2025-09-17 11:29:56,390 - src.data_transformation - INFO - Removing outliers using iqr method
+2025-09-17 11:29:56,425 - src.data_transformation - INFO - Outlier removal completed: 39 outliers detected and removed
+2025-09-17 11:29:56,425 - src.pipeline - INFO - Outlier removal completed: 2 records remaining
+2025-09-17 11:29:56,426 - src.data_transformation - INFO - Starting feature engineering
+2025-09-17 11:29:56,426 - src.pipeline - ERROR - Error processing data: 'tuple' object has no attribute 'copy'
+2025-09-17 11:29:56,426 - src.pipeline - ERROR - Error in full pipeline execution: 'tuple' object has no attribute 'copy'
+2025-09-17 11:29:56,427 - __main__ - ERROR - Pipeline execution failed: 'tuple' object has no attribute 'copy'
+2025-09-17 11:30:31,328 - root - INFO - Logging system initialized
+2025-09-17 11:30:31,329 - root - INFO - Log level: INFO
+2025-09-17 11:30:31,329 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:30:31,330 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:30:31,330 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:30:31,331 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:30:31,333 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:30:31,334 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:30:31,334 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:30:31,335 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:30:31,335 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:30:31,336 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:30:31,336 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:30:31,336 - src.data_ingestion - INFO - Generating 1000 synthetic vehicle sensor records
+2025-09-17 11:30:31,344 - src.data_ingestion - INFO - Injecting 50 anomalies (5.0%)
+2025-09-17 11:30:31,386 - src.data_ingestion - INFO - Generated synthetic data with 1000 records
+2025-09-17 11:30:31,394 - src.pipeline - INFO - Generated 1000 records for 951 vehicles
+2025-09-17 11:30:31,397 - src.pipeline - INFO - Data ingestion completed from synthetic data generation
+2025-09-17 11:30:31,399 - src.pipeline - INFO - Processing 1000 records
+2025-09-17 11:30:31,399 - src.data_transformation - INFO - Starting data cleaning for 1000 records
+2025-09-17 11:30:31,465 - src.data_transformation - INFO - Data cleaning completed: 1000 records remaining, 0 records removed
+2025-09-17 11:30:31,492 - src.pipeline - INFO - Data cleaning completed: 1000 records remaining
+2025-09-17 11:30:31,502 - src.data_transformation - INFO - Removing outliers using iqr method
+2025-09-17 11:30:31,562 - src.data_transformation - INFO - Outlier removal completed: 29 outliers detected and removed
+2025-09-17 11:30:31,563 - src.pipeline - INFO - Outlier removal completed: 971 records remaining
+2025-09-17 11:30:31,563 - src.data_transformation - INFO - Starting feature engineering
+2025-09-17 11:30:31,609 - src.data_transformation - INFO - Feature engineering completed: 26 total features
+2025-09-17 11:30:31,625 - src.pipeline - INFO - Feature engineering completed: 26 features
+2025-09-17 11:30:31,626 - src.data_transformation - INFO - Normalizing data using standard method
+2025-09-17 11:30:31,653 - src.data_transformation - INFO - Data normalization completed for 21 features
+2025-09-17 11:30:31,654 - src.pipeline - INFO - Data normalization completed
+2025-09-17 11:30:31,659 - src.pipeline - INFO - Detecting anomalies in 971 records
+2025-09-17 11:30:31,660 - src.pipeline - ERROR - Error detecting anomalies: 'AnomalyDetector' object has no attribute 'train'
+2025-09-17 11:30:31,661 - src.pipeline - ERROR - Error in full pipeline execution: 'AnomalyDetector' object has no attribute 'train'
+2025-09-17 11:30:31,661 - __main__ - ERROR - Pipeline execution failed: 'AnomalyDetector' object has no attribute 'train'
+2025-09-17 11:31:29,764 - root - INFO - Logging system initialized
+2025-09-17 11:31:29,765 - root - INFO - Log level: INFO
+2025-09-17 11:31:29,765 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:31:29,766 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:31:29,766 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:31:29,766 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:31:29,768 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:31:29,768 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:31:29,768 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:31:29,769 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:31:29,769 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:31:29,769 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:31:29,769 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:31:29,769 - src.data_ingestion - INFO - Generating 1000 synthetic vehicle sensor records
+2025-09-17 11:31:29,775 - src.data_ingestion - INFO - Injecting 50 anomalies (5.0%)
+2025-09-17 11:31:29,803 - src.data_ingestion - INFO - Generated synthetic data with 1000 records
+2025-09-17 11:31:29,804 - src.pipeline - INFO - Generated 1000 records for 937 vehicles
+2025-09-17 11:31:29,806 - src.pipeline - INFO - Data ingestion completed from synthetic data generation
+2025-09-17 11:31:29,806 - src.pipeline - INFO - Processing 1000 records
+2025-09-17 11:31:29,806 - src.data_transformation - INFO - Starting data cleaning for 1000 records
+2025-09-17 11:31:29,823 - src.data_transformation - INFO - Data cleaning completed: 1000 records remaining, 0 records removed
+2025-09-17 11:31:29,823 - src.pipeline - INFO - Data cleaning completed: 1000 records remaining
+2025-09-17 11:31:29,824 - src.data_transformation - INFO - Removing outliers using iqr method
+2025-09-17 11:31:29,847 - src.data_transformation - INFO - Outlier removal completed: 39 outliers detected and removed
+2025-09-17 11:31:29,849 - src.pipeline - INFO - Outlier removal completed: 961 records remaining
+2025-09-17 11:31:29,851 - src.data_transformation - INFO - Starting feature engineering
+2025-09-17 11:31:29,873 - src.data_transformation - INFO - Feature engineering completed: 26 total features
+2025-09-17 11:31:29,873 - src.pipeline - INFO - Feature engineering completed: 26 features
+2025-09-17 11:31:29,874 - src.data_transformation - INFO - Normalizing data using standard method
+2025-09-17 11:31:29,888 - src.data_transformation - INFO - Data normalization completed for 21 features
+2025-09-17 11:31:29,889 - src.pipeline - INFO - Data normalization completed
+2025-09-17 11:31:29,889 - src.pipeline - INFO - Detecting anomalies in 961 records
+2025-09-17 11:31:29,890 - src.anomaly_detection - INFO - Training Isolation Forest model
+2025-09-17 11:31:29,891 - src.anomaly_detection - INFO - Using features: ['speed', 'engine_temperature', 'fuel_level', 'speed_rolling_mean', 'speed_rolling_std', 'engine_temperature_rolling_mean', 'engine_temperature_rolling_std', 'fuel_level_rolling_mean', 'fuel_level_rolling_std', 'speed_lag1']
+2025-09-17 11:31:30,170 - src.anomaly_detection - INFO - Isolation Forest trained on 961 samples
+2025-09-17 11:31:30,170 - src.anomaly_detection - INFO - Detecting anomalies using isolation_forest method
+2025-09-17 11:31:30,210 - src.anomaly_detection - INFO - Isolation Forest detected 96 anomalies (9.99%)
+2025-09-17 11:31:30,217 - src.pipeline - INFO - Anomaly detection completed: 96 anomalies detected (9.99% rate)
+2025-09-17 11:31:30,217 - src.pipeline - INFO - Storing data in database
+2025-09-17 11:31:30,384 - src.data_storage - ERROR - Error inserting raw data: Error binding parameter 1: type 'Timestamp' is not supported
+2025-09-17 11:31:30,384 - src.pipeline - ERROR - Error storing data: Error binding parameter 1: type 'Timestamp' is not supported
+2025-09-17 11:31:30,384 - src.pipeline - ERROR - Error in full pipeline execution: Error binding parameter 1: type 'Timestamp' is not supported
+2025-09-17 11:31:30,385 - __main__ - ERROR - Pipeline execution failed: Error binding parameter 1: type 'Timestamp' is not supported
+2025-09-17 11:32:46,941 - root - INFO - Logging system initialized
+2025-09-17 11:32:46,949 - root - INFO - Log level: INFO
+2025-09-17 11:32:46,949 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:32:46,950 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:32:46,950 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:32:46,951 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:32:46,957 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:32:46,957 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:32:46,958 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:32:46,958 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:32:46,958 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:32:46,958 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:32:46,961 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:32:46,961 - src.data_ingestion - INFO - Generating 1000 synthetic vehicle sensor records
+2025-09-17 11:32:46,977 - src.data_ingestion - INFO - Injecting 50 anomalies (5.0%)
+2025-09-17 11:32:47,048 - src.data_ingestion - INFO - Generated synthetic data with 1000 records
+2025-09-17 11:32:47,052 - src.pipeline - INFO - Generated 1000 records for 944 vehicles
+2025-09-17 11:32:47,052 - src.pipeline - INFO - Data ingestion completed from synthetic data generation
+2025-09-17 11:32:47,053 - src.pipeline - INFO - Processing 1000 records
+2025-09-17 11:32:47,053 - src.data_transformation - INFO - Starting data cleaning for 1000 records
+2025-09-17 11:32:47,080 - src.data_transformation - INFO - Data cleaning completed: 1000 records remaining, 0 records removed
+2025-09-17 11:32:47,083 - src.pipeline - INFO - Data cleaning completed: 1000 records remaining
+2025-09-17 11:32:47,085 - src.data_transformation - INFO - Removing outliers using iqr method
+2025-09-17 11:32:47,138 - src.data_transformation - INFO - Outlier removal completed: 44 outliers detected and removed
+2025-09-17 11:32:47,139 - src.pipeline - INFO - Outlier removal completed: 956 records remaining
+2025-09-17 11:32:47,140 - src.data_transformation - INFO - Starting feature engineering
+2025-09-17 11:32:47,193 - src.data_transformation - INFO - Feature engineering completed: 26 total features
+2025-09-17 11:32:47,196 - src.pipeline - INFO - Feature engineering completed: 26 features
+2025-09-17 11:32:47,198 - src.data_transformation - INFO - Normalizing data using standard method
+2025-09-17 11:32:47,237 - src.data_transformation - INFO - Data normalization completed for 21 features
+2025-09-17 11:32:47,238 - src.pipeline - INFO - Data normalization completed
+2025-09-17 11:32:47,240 - src.pipeline - INFO - Detecting anomalies in 956 records
+2025-09-17 11:32:47,247 - src.anomaly_detection - INFO - Training Isolation Forest model
+2025-09-17 11:32:47,255 - src.anomaly_detection - INFO - Using features: ['speed', 'engine_temperature', 'fuel_level', 'speed_rolling_mean', 'speed_rolling_std', 'engine_temperature_rolling_mean', 'engine_temperature_rolling_std', 'fuel_level_rolling_mean', 'fuel_level_rolling_std', 'speed_lag1']
+2025-09-17 11:32:47,750 - src.anomaly_detection - INFO - Isolation Forest trained on 956 samples
+2025-09-17 11:32:47,751 - src.anomaly_detection - INFO - Detecting anomalies using isolation_forest method
+2025-09-17 11:32:47,823 - src.anomaly_detection - INFO - Isolation Forest detected 96 anomalies (10.04%)
+2025-09-17 11:32:47,825 - src.pipeline - INFO - Anomaly detection completed: 96 anomalies detected (10.04% rate)
+2025-09-17 11:32:47,825 - src.pipeline - INFO - Storing data in database
+2025-09-17 11:32:48,052 - src.data_storage - ERROR - Error inserting raw data: unsupported operand type(s) for -: 'NoneType' and 'int'
+2025-09-17 11:32:48,052 - src.pipeline - ERROR - Error storing data: unsupported operand type(s) for -: 'NoneType' and 'int'
+2025-09-17 11:32:48,053 - src.pipeline - ERROR - Error in full pipeline execution: unsupported operand type(s) for -: 'NoneType' and 'int'
+2025-09-17 11:32:48,053 - __main__ - ERROR - Pipeline execution failed: unsupported operand type(s) for -: 'NoneType' and 'int'
+2025-09-17 11:33:23,900 - root - INFO - Logging system initialized
+2025-09-17 11:33:23,901 - root - INFO - Log level: INFO
+2025-09-17 11:33:23,902 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:33:23,902 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:33:23,903 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:33:23,903 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:33:23,905 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:33:23,906 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:33:23,906 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:33:23,907 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:33:23,907 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:33:23,907 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:33:23,908 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:33:23,908 - src.data_ingestion - INFO - Generating 1000 synthetic vehicle sensor records
+2025-09-17 11:33:23,913 - src.data_ingestion - INFO - Injecting 50 anomalies (5.0%)
+2025-09-17 11:33:23,947 - src.data_ingestion - INFO - Generated synthetic data with 1000 records
+2025-09-17 11:33:23,955 - src.pipeline - INFO - Generated 1000 records for 939 vehicles
+2025-09-17 11:33:23,957 - src.pipeline - INFO - Data ingestion completed from synthetic data generation
+2025-09-17 11:33:23,957 - src.pipeline - INFO - Processing 1000 records
+2025-09-17 11:33:23,960 - src.data_transformation - INFO - Starting data cleaning for 1000 records
+2025-09-17 11:33:23,982 - src.data_transformation - INFO - Data cleaning completed: 1000 records remaining, 0 records removed
+2025-09-17 11:33:23,984 - src.pipeline - INFO - Data cleaning completed: 1000 records remaining
+2025-09-17 11:33:23,990 - src.data_transformation - INFO - Removing outliers using iqr method
+2025-09-17 11:33:24,029 - src.data_transformation - INFO - Outlier removal completed: 47 outliers detected and removed
+2025-09-17 11:33:24,030 - src.pipeline - INFO - Outlier removal completed: 953 records remaining
+2025-09-17 11:33:24,031 - src.data_transformation - INFO - Starting feature engineering
+2025-09-17 11:33:24,078 - src.data_transformation - INFO - Feature engineering completed: 26 total features
+2025-09-17 11:33:24,080 - src.pipeline - INFO - Feature engineering completed: 26 features
+2025-09-17 11:33:24,080 - src.data_transformation - INFO - Normalizing data using standard method
+2025-09-17 11:33:24,110 - src.data_transformation - INFO - Data normalization completed for 21 features
+2025-09-17 11:33:24,111 - src.pipeline - INFO - Data normalization completed
+2025-09-17 11:33:24,112 - src.pipeline - INFO - Detecting anomalies in 953 records
+2025-09-17 11:33:24,112 - src.anomaly_detection - INFO - Training Isolation Forest model
+2025-09-17 11:33:24,114 - src.anomaly_detection - INFO - Using features: ['speed', 'engine_temperature', 'fuel_level', 'speed_rolling_mean', 'speed_rolling_std', 'engine_temperature_rolling_mean', 'engine_temperature_rolling_std', 'fuel_level_rolling_mean', 'fuel_level_rolling_std', 'speed_lag1']
+2025-09-17 11:33:24,500 - src.anomaly_detection - INFO - Isolation Forest trained on 953 samples
+2025-09-17 11:33:24,500 - src.anomaly_detection - INFO - Detecting anomalies using isolation_forest method
+2025-09-17 11:33:24,551 - src.anomaly_detection - INFO - Isolation Forest detected 96 anomalies (10.07%)
+2025-09-17 11:33:24,553 - src.pipeline - INFO - Anomaly detection completed: 96 anomalies detected (10.07% rate)
+2025-09-17 11:33:24,555 - src.pipeline - INFO - Storing data in database
+2025-09-17 11:33:24,710 - src.data_storage - INFO - Inserted 1000 raw data records
+2025-09-17 11:33:24,970 - src.data_storage - INFO - Inserted 953 processed data records
+2025-09-17 11:33:25,141 - src.data_storage - INFO - Inserted 953 anomaly records
+2025-09-17 11:33:25,142 - src.pipeline - INFO - Data storage completed successfully
+2025-09-17 11:33:25,142 - src.pipeline - INFO - Creating visualization dashboard
+2025-09-17 11:33:25,143 - src.visualization - INFO - Creating comprehensive visualization dashboard
+2025-09-17 11:33:27,024 - src.visualization - ERROR - Error creating sensor overview plot: 'is_anomaly'
+2025-09-17 11:33:27,025 - src.visualization - ERROR - Error creating dashboard: 'is_anomaly'
+2025-09-17 11:33:27,025 - src.pipeline - ERROR - Error creating visualizations: 'is_anomaly'
+2025-09-17 11:33:27,026 - src.pipeline - ERROR - Error in full pipeline execution: 'is_anomaly'
+2025-09-17 11:33:27,026 - __main__ - ERROR - Pipeline execution failed: 'is_anomaly'
+2025-09-17 11:35:38,479 - root - INFO - Logging system initialized
+2025-09-17 11:35:38,479 - root - INFO - Log level: INFO
+2025-09-17 11:35:38,479 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:35:38,480 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:35:38,480 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:35:38,481 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:35:38,484 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:35:38,485 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:35:38,485 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:35:38,485 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:35:38,486 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:35:38,486 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:35:38,487 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:35:38,487 - src.data_ingestion - INFO - Generating 1000 synthetic vehicle sensor records
+2025-09-17 11:35:38,493 - src.data_ingestion - INFO - Injecting 50 anomalies (5.0%)
+2025-09-17 11:35:38,534 - src.data_ingestion - INFO - Generated synthetic data with 1000 records
+2025-09-17 11:35:38,536 - src.pipeline - INFO - Generated 1000 records for 950 vehicles
+2025-09-17 11:35:38,537 - src.pipeline - INFO - Data ingestion completed from synthetic data generation
+2025-09-17 11:35:38,537 - src.pipeline - INFO - Processing 1000 records
+2025-09-17 11:35:38,537 - src.data_transformation - INFO - Starting data cleaning for 1000 records
+2025-09-17 11:35:38,555 - src.data_transformation - INFO - Data cleaning completed: 1000 records remaining, 0 records removed
+2025-09-17 11:35:38,556 - src.pipeline - INFO - Data cleaning completed: 1000 records remaining
+2025-09-17 11:35:38,557 - src.data_transformation - INFO - Removing outliers using iqr method
+2025-09-17 11:35:38,584 - src.data_transformation - INFO - Outlier removal completed: 47 outliers detected and removed
+2025-09-17 11:35:38,584 - src.pipeline - INFO - Outlier removal completed: 953 records remaining
+2025-09-17 11:35:38,585 - src.data_transformation - INFO - Starting feature engineering
+2025-09-17 11:35:38,619 - src.data_transformation - INFO - Feature engineering completed: 26 total features
+2025-09-17 11:35:38,620 - src.pipeline - INFO - Feature engineering completed: 26 features
+2025-09-17 11:35:38,620 - src.data_transformation - INFO - Normalizing data using standard method
+2025-09-17 11:35:38,648 - src.data_transformation - INFO - Data normalization completed for 21 features
+2025-09-17 11:35:38,649 - src.pipeline - INFO - Data normalization completed
+2025-09-17 11:35:38,649 - src.pipeline - INFO - Detecting anomalies in 953 records
+2025-09-17 11:35:38,650 - src.anomaly_detection - INFO - Training Isolation Forest model
+2025-09-17 11:35:38,651 - src.anomaly_detection - INFO - Using features: ['speed', 'engine_temperature', 'fuel_level', 'speed_rolling_mean', 'speed_rolling_std', 'engine_temperature_rolling_mean', 'engine_temperature_rolling_std', 'fuel_level_rolling_mean', 'fuel_level_rolling_std', 'speed_lag1']
+2025-09-17 11:35:39,137 - src.anomaly_detection - INFO - Isolation Forest trained on 953 samples
+2025-09-17 11:35:39,138 - src.anomaly_detection - INFO - Detecting anomalies using isolation_forest method
+2025-09-17 11:35:39,180 - src.anomaly_detection - INFO - Isolation Forest detected 96 anomalies (10.07%)
+2025-09-17 11:35:39,182 - src.pipeline - INFO - Anomaly detection completed: 96 anomalies detected (10.07% rate)
+2025-09-17 11:35:39,182 - src.pipeline - INFO - Storing data in database
+2025-09-17 11:35:39,363 - src.data_storage - INFO - Inserted 1000 raw data records
+2025-09-17 11:35:39,646 - src.data_storage - INFO - Inserted 953 processed data records
+2025-09-17 11:35:39,796 - src.data_storage - INFO - Inserted 953 anomaly records
+2025-09-17 11:35:39,797 - src.pipeline - INFO - Data storage completed successfully
+2025-09-17 11:35:39,798 - src.pipeline - INFO - Creating visualization dashboard
+2025-09-17 11:35:39,798 - src.visualization - INFO - Creating comprehensive visualization dashboard
+2025-09-17 11:35:41,371 - src.visualization - INFO - Sensor overview plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\sensor_overview_20250917_113540.png
+2025-09-17 11:35:44,308 - src.visualization - INFO - Anomaly analysis plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\anomaly_analysis_20250917_113542.png
+2025-09-17 11:35:46,552 - src.visualization - INFO - Correlation matrix plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\correlation_matrix_20250917_113545.png
+2025-09-17 11:36:00,597 - src.visualization - INFO - Vehicle comparison plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\vehicle_comparison_speed_20250917_113554.png
+2025-09-17 11:36:14,154 - src.visualization - INFO - Vehicle comparison plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\vehicle_comparison_fuel_level_20250917_113607.png
+2025-09-17 11:36:14,178 - src.visualization - INFO - Dashboard created with 5 plots
+2025-09-17 11:36:14,178 - src.pipeline - INFO - Visualization dashboard created: 5 plots generated
+2025-09-17 11:36:14,179 - src.pipeline - INFO - Generating analysis summary report
+2025-09-17 11:36:14,188 - src.data_storage - INFO - Retrieved database statistics
+2025-09-17 11:36:14,194 - src.visualization - INFO - Summary report saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\analysis_report_20250917_113614.txt
+2025-09-17 11:36:14,194 - src.pipeline - INFO - Analysis report generated: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\analysis_report_20250917_113614.txt
+2025-09-17 11:36:14,194 - src.pipeline - ERROR - Error in full pipeline execution: 'format'
+2025-09-17 11:36:14,195 - __main__ - ERROR - Pipeline execution failed: 'format'
+2025-09-17 11:37:09,588 - root - INFO - Logging system initialized
+2025-09-17 11:37:09,589 - root - INFO - Log level: INFO
+2025-09-17 11:37:09,589 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:37:09,589 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:37:09,590 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:37:09,590 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:37:09,592 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:37:09,593 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:37:09,593 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:37:09,594 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:37:09,594 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:37:09,594 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:37:09,595 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:37:09,595 - src.data_ingestion - INFO - Generating 1000 synthetic vehicle sensor records
+2025-09-17 11:37:09,599 - src.data_ingestion - INFO - Injecting 50 anomalies (5.0%)
+2025-09-17 11:37:09,647 - src.data_ingestion - INFO - Generated synthetic data with 1000 records
+2025-09-17 11:37:09,684 - src.pipeline - INFO - Generated 1000 records for 945 vehicles
+2025-09-17 11:37:09,748 - src.pipeline - INFO - Data ingestion completed from synthetic data generation
+2025-09-17 11:37:09,774 - src.pipeline - INFO - Processing 1000 records
+2025-09-17 11:37:09,780 - src.data_transformation - INFO - Starting data cleaning for 1000 records
+2025-09-17 11:37:09,795 - src.data_transformation - INFO - Data cleaning completed: 1000 records remaining, 0 records removed
+2025-09-17 11:37:09,796 - src.pipeline - INFO - Data cleaning completed: 1000 records remaining
+2025-09-17 11:37:09,796 - src.data_transformation - INFO - Removing outliers using iqr method
+2025-09-17 11:37:09,832 - src.data_transformation - INFO - Outlier removal completed: 38 outliers detected and removed
+2025-09-17 11:37:09,832 - src.pipeline - INFO - Outlier removal completed: 962 records remaining
+2025-09-17 11:37:09,832 - src.data_transformation - INFO - Starting feature engineering
+2025-09-17 11:37:09,862 - src.data_transformation - INFO - Feature engineering completed: 26 total features
+2025-09-17 11:37:09,863 - src.pipeline - INFO - Feature engineering completed: 26 features
+2025-09-17 11:37:09,863 - src.data_transformation - INFO - Normalizing data using standard method
+2025-09-17 11:37:09,881 - src.data_transformation - INFO - Data normalization completed for 21 features
+2025-09-17 11:37:09,882 - src.pipeline - INFO - Data normalization completed
+2025-09-17 11:37:09,882 - src.pipeline - INFO - Detecting anomalies in 962 records
+2025-09-17 11:37:09,883 - src.anomaly_detection - INFO - Training Isolation Forest model
+2025-09-17 11:37:09,884 - src.anomaly_detection - INFO - Using features: ['speed', 'engine_temperature', 'fuel_level', 'speed_rolling_mean', 'speed_rolling_std', 'engine_temperature_rolling_mean', 'engine_temperature_rolling_std', 'fuel_level_rolling_mean', 'fuel_level_rolling_std', 'speed_lag1']
+2025-09-17 11:37:10,140 - src.anomaly_detection - INFO - Isolation Forest trained on 962 samples
+2025-09-17 11:37:10,140 - src.anomaly_detection - INFO - Detecting anomalies using isolation_forest method
+2025-09-17 11:37:10,184 - src.anomaly_detection - INFO - Isolation Forest detected 97 anomalies (10.08%)
+2025-09-17 11:37:10,188 - src.pipeline - INFO - Anomaly detection completed: 97 anomalies detected (10.08% rate)
+2025-09-17 11:37:10,190 - src.pipeline - INFO - Storing data in database
+2025-09-17 11:37:10,380 - src.data_storage - INFO - Inserted 1000 raw data records
+2025-09-17 11:37:10,560 - src.data_storage - INFO - Inserted 962 processed data records
+2025-09-17 11:37:10,691 - src.data_storage - INFO - Inserted 962 anomaly records
+2025-09-17 11:37:10,692 - src.pipeline - INFO - Data storage completed successfully
+2025-09-17 11:37:10,692 - src.pipeline - INFO - Creating visualization dashboard
+2025-09-17 11:37:10,693 - src.visualization - INFO - Creating comprehensive visualization dashboard
+2025-09-17 11:37:12,146 - src.visualization - INFO - Sensor overview plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\sensor_overview_20250917_113711.png
+2025-09-17 11:37:15,159 - src.visualization - INFO - Anomaly analysis plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\anomaly_analysis_20250917_113713.png
+2025-09-17 11:37:17,186 - src.visualization - INFO - Correlation matrix plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\correlation_matrix_20250917_113715.png
+2025-09-17 11:37:31,312 - src.visualization - INFO - Vehicle comparison plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\vehicle_comparison_speed_20250917_113724.png
+2025-09-17 11:37:45,010 - src.visualization - INFO - Vehicle comparison plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\vehicle_comparison_fuel_level_20250917_113738.png
+2025-09-17 11:37:45,030 - src.visualization - INFO - Dashboard created with 5 plots
+2025-09-17 11:37:45,031 - src.pipeline - INFO - Visualization dashboard created: 5 plots generated
+2025-09-17 11:37:45,031 - src.pipeline - INFO - Generating analysis summary report
+2025-09-17 11:37:45,036 - src.data_storage - INFO - Retrieved database statistics
+2025-09-17 11:37:45,041 - src.visualization - INFO - Summary report saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\analysis_report_20250917_113745.txt
+2025-09-17 11:37:45,041 - src.pipeline - INFO - Analysis report generated: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\analysis_report_20250917_113745.txt
+2025-09-17 11:37:45,041 - src.pipeline - ERROR - Error in full pipeline execution: 'format'
+2025-09-17 11:37:45,042 - __main__ - ERROR - Pipeline execution failed: 'format'
+2025-09-17 11:38:18,056 - root - INFO - Logging system initialized
+2025-09-17 11:38:18,057 - root - INFO - Log level: INFO
+2025-09-17 11:38:18,058 - root - INFO - Log file: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\logs\pipeline.log
+2025-09-17 11:38:18,058 - src.data_ingestion - INFO - DataIngestion module initialized
+2025-09-17 11:38:18,058 - src.data_transformation - INFO - DataTransformation module initialized
+2025-09-17 11:38:18,059 - src.anomaly_detection - INFO - AnomalyDetector module initialized
+2025-09-17 11:38:18,061 - src.data_storage - INFO - Database tables initialized successfully
+2025-09-17 11:38:18,062 - src.data_storage - INFO - Database initialized at: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\database\vehicle_data.db
+2025-09-17 11:38:18,062 - src.visualization - INFO - Visualizer initialized with output directory: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:38:18,063 - src.pipeline - INFO - Data pipeline initialized successfully
+2025-09-17 11:38:18,063 - __main__ - INFO - Running full pipeline (generate + process)...
+2025-09-17 11:38:18,064 - src.pipeline - INFO - Starting full pipeline execution
+2025-09-17 11:38:18,064 - src.pipeline - INFO - Generating 1000 sample records
+2025-09-17 11:38:18,065 - src.data_ingestion - INFO - Generating 1000 synthetic vehicle sensor records
+2025-09-17 11:38:18,069 - src.data_ingestion - INFO - Injecting 50 anomalies (5.0%)
+2025-09-17 11:38:18,096 - src.data_ingestion - INFO - Generated synthetic data with 1000 records
+2025-09-17 11:38:18,098 - src.pipeline - INFO - Generated 1000 records for 938 vehicles
+2025-09-17 11:38:18,098 - src.pipeline - INFO - Data ingestion completed from synthetic data generation
+2025-09-17 11:38:18,098 - src.pipeline - INFO - Processing 1000 records
+2025-09-17 11:38:18,099 - src.data_transformation - INFO - Starting data cleaning for 1000 records
+2025-09-17 11:38:18,124 - src.data_transformation - INFO - Data cleaning completed: 1000 records remaining, 0 records removed
+2025-09-17 11:38:18,125 - src.pipeline - INFO - Data cleaning completed: 1000 records remaining
+2025-09-17 11:38:18,126 - src.data_transformation - INFO - Removing outliers using iqr method
+2025-09-17 11:38:18,154 - src.data_transformation - INFO - Outlier removal completed: 36 outliers detected and removed
+2025-09-17 11:38:18,156 - src.pipeline - INFO - Outlier removal completed: 964 records remaining
+2025-09-17 11:38:18,158 - src.data_transformation - INFO - Starting feature engineering
+2025-09-17 11:38:18,198 - src.data_transformation - INFO - Feature engineering completed: 26 total features
+2025-09-17 11:38:18,199 - src.pipeline - INFO - Feature engineering completed: 26 features
+2025-09-17 11:38:18,199 - src.data_transformation - INFO - Normalizing data using standard method
+2025-09-17 11:38:18,215 - src.data_transformation - INFO - Data normalization completed for 21 features
+2025-09-17 11:38:18,215 - src.pipeline - INFO - Data normalization completed
+2025-09-17 11:38:18,216 - src.pipeline - INFO - Detecting anomalies in 964 records
+2025-09-17 11:38:18,217 - src.anomaly_detection - INFO - Training Isolation Forest model
+2025-09-17 11:38:18,218 - src.anomaly_detection - INFO - Using features: ['speed', 'engine_temperature', 'fuel_level', 'speed_rolling_mean', 'speed_rolling_std', 'engine_temperature_rolling_mean', 'engine_temperature_rolling_std', 'fuel_level_rolling_mean', 'fuel_level_rolling_std', 'speed_lag1']
+2025-09-17 11:38:18,512 - src.anomaly_detection - INFO - Isolation Forest trained on 964 samples
+2025-09-17 11:38:18,513 - src.anomaly_detection - INFO - Detecting anomalies using isolation_forest method
+2025-09-17 11:38:18,549 - src.anomaly_detection - INFO - Isolation Forest detected 97 anomalies (10.06%)
+2025-09-17 11:38:18,550 - src.pipeline - INFO - Anomaly detection completed: 97 anomalies detected (10.06% rate)
+2025-09-17 11:38:18,550 - src.pipeline - INFO - Storing data in database
+2025-09-17 11:38:18,713 - src.data_storage - INFO - Inserted 1000 raw data records
+2025-09-17 11:38:18,926 - src.data_storage - INFO - Inserted 964 processed data records
+2025-09-17 11:38:19,063 - src.data_storage - INFO - Inserted 964 anomaly records
+2025-09-17 11:38:19,064 - src.pipeline - INFO - Data storage completed successfully
+2025-09-17 11:38:19,064 - src.pipeline - INFO - Creating visualization dashboard
+2025-09-17 11:38:19,064 - src.visualization - INFO - Creating comprehensive visualization dashboard
+2025-09-17 11:38:20,494 - src.visualization - INFO - Sensor overview plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\sensor_overview_20250917_113819.png
+2025-09-17 11:38:23,150 - src.visualization - INFO - Anomaly analysis plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\anomaly_analysis_20250917_113821.png
+2025-09-17 11:38:24,888 - src.visualization - INFO - Correlation matrix plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\correlation_matrix_20250917_113823.png
+2025-09-17 11:38:38,671 - src.visualization - INFO - Vehicle comparison plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\vehicle_comparison_speed_20250917_113832.png
+2025-09-17 11:38:52,218 - src.visualization - INFO - Vehicle comparison plot saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\vehicle_comparison_fuel_level_20250917_113846.png
+2025-09-17 11:38:52,240 - src.visualization - INFO - Dashboard created with 5 plots
+2025-09-17 11:38:52,240 - src.pipeline - INFO - Visualization dashboard created: 5 plots generated
+2025-09-17 11:38:52,240 - src.pipeline - INFO - Generating analysis summary report
+2025-09-17 11:38:52,245 - src.data_storage - INFO - Retrieved database statistics
+2025-09-17 11:38:52,251 - src.visualization - INFO - Summary report saved: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\analysis_report_20250917_113852.txt
+2025-09-17 11:38:52,251 - src.pipeline - INFO - Analysis report generated: C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\analysis_report_20250917_113852.txt
+2025-09-17 11:38:52,252 - src.pipeline - INFO - Exporting data in parquet format
+2025-09-17 11:38:53,271 - src.data_storage - INFO - Exported raw_data to C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\raw_data.parquet (4000 records)
+2025-09-17 11:38:53,345 - src.data_storage - INFO - Exported processed_data to C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\processed_data.parquet (3832 records)
+2025-09-17 11:38:53,392 - src.data_storage - INFO - Exported anomalies to C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports\anomalies.parquet (3832 records)
+2025-09-17 11:38:53,393 - src.data_storage - INFO - Data export completed to C:\Users\Lenovo\WORKSPACE\DriveETL\DriveETL\reports
+2025-09-17 11:38:53,394 - src.pipeline - INFO - Data export completed
+2025-09-17 11:38:53,398 - src.data_storage - INFO - Retrieved database statistics
+2025-09-17 11:38:53,399 - src.pipeline - INFO - Full pipeline execution completed in 0:00:35.330325
+2025-09-17 11:38:53,400 - src.pipeline - INFO - Results: 1000 records processed, 97 anomalies detected
+2025-09-17 11:38:53,401 - __main__ - INFO - Pipeline execution completed successfully!
