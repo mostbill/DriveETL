@@ -1,6 +1,6 @@
 # DriveETL
 
-A comprehensive Python-based data pipeline for vehicle sensor data processing, anomaly detection, and visualization. This project demonstrates end-to-end data engineering practices with AI-powered anomaly detection capabilities.
+DriveETL stands for "Drive Extract, Transform, Load" - a specialized data pipeline designed for processing vehicle and driving-related sensor data. This comprehensive Python-based solution handles vehicle sensor data processing, anomaly detection, and visualization, demonstrating end-to-end data engineering practices with AI-powered anomaly detection capabilities.
 
 ## 🚀 Features
 
