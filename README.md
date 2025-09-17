@@ -18,22 +18,22 @@ A comprehensive Python-based data pipeline for vehicle sensor data processing, a
 The AutoDataPipeline generates comprehensive visualizations to help analyze vehicle sensor data and identify anomalies. Here are some sample outputs:
 
 ### 📈 Sensor Overview Dashboard
-![Sensor Overview](reports/sensor_overview_20250917_113852.png)
+![Sensor Overview](reports/sensor_overview_20250917_113819.png)
 *Complete dashboard showing all sensor readings over time with trend analysis and statistical summaries*
 
 ### 🚨 Anomaly Detection Analysis
-![Anomaly Analysis](reports/anomaly_analysis_20250917_113852.png)
+![Anomaly Analysis](reports/anomaly_analysis_20250917_113821.png)
 *Detailed anomaly detection results highlighting outliers in red across different sensor measurements*
 
 ### 🔗 Correlation Matrix Heatmap
-![Correlation Matrix](reports/correlation_matrix_20250917_113852.png)
+![Correlation Matrix](reports/correlation_matrix_20250917_113823.png)
 *Correlation analysis between different sensor parameters to identify relationships and dependencies*
 
 ### 🚗 Vehicle Performance Comparison
-![Vehicle Speed Comparison](reports/vehicle_comparison_speed_20250917_113852.png)
+![Vehicle Speed Comparison](reports/vehicle_comparison_speed_20250917_113832.png)
 *Comparative analysis of speed patterns across different vehicles in the fleet*
 
-![Vehicle Fuel Level Comparison](reports/vehicle_comparison_fuel_level_20250917_113852.png)
+![Vehicle Fuel Level Comparison](reports/vehicle_comparison_fuel_level_20250917_113846.png)
 *Fuel consumption patterns and efficiency metrics across multiple vehicles*
 
 ## 📋 Prerequisites
@@ -174,13 +174,13 @@ AutoDataPipeline/
 │   ├── pipeline.py              # Main pipeline orchestration
 │   └── api.py                   # FastAPI REST endpoints
 ├── data/                        # Data files (created at runtime)
-├── plots/                       # Generated visualizations
-├── reports/                     # Analysis reports
+├── database/                    # SQLite database files
+├── reports/                     # Analysis reports and visualizations
 ├── logs/                        # Application logs
-├── models/                      # Trained ML models
 ├── config.py                    # Configuration settings
 ├── main.py                      # Main entry point
 ├── requirements.txt             # Python dependencies
+├── test_pipeline.py             # Testing and validation
 ├── validate_project.bat         # Project validation script
 └── README.md                    # This file
 ```
