@@ -1,4 +1,4 @@
-# AutoDataPipeline
+# DriveETL
 
 A comprehensive Python-based data pipeline for vehicle sensor data processing, anomaly detection, and visualization. This project demonstrates end-to-end data engineering practices with AI-powered anomaly detection capabilities.
 
@@ -15,7 +15,7 @@ A comprehensive Python-based data pipeline for vehicle sensor data processing, a
 
 ## 📊 Sample Visualizations
 
-The AutoDataPipeline generates comprehensive visualizations to help analyze vehicle sensor data and identify anomalies. Here are some sample outputs:
+The DriveETL generates comprehensive visualizations to help analyze vehicle sensor data and identify anomalies. Here are some sample outputs:
 
 ### 📈 Sensor Overview Dashboard
 ![Sensor Overview](reports/sensor_overview_20250917_113819.png)
@@ -49,7 +49,7 @@ The AutoDataPipeline generates comprehensive visualizations to help analyze vehi
 ```bash
 # If using git
 git clone <repository-url>
-cd AutoDataPipeline
+cd DriveETL
 
 # Or download and extract the project files
 ```
@@ -162,7 +162,7 @@ curl -X GET "http://localhost:8000/anomalies"
 ## 📁 Project Structure
 
 ```
-AutoDataPipeline/
+DriveETL/
 ├── src/                          # Source code modules
 │   ├── __init__.py              # Package initialization
 │   ├── logging_config.py        # Logging configuration
@@ -360,4 +360,4 @@ If you encounter any issues:
 
 ---
 
-**AutoDataPipeline - Professional Vehicle Data Analytics Solution**
+**DriveETL - Professional Vehicle Data Analytics Solution**
